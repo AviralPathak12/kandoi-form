@@ -1,0 +1,14 @@
+.container-fluid {
+    width: 100%;
+    padding-right: 00px;
+    padding-left: 00px;
+    margin-right: 00px;
+    margin-left: 00px;
+    
+}
+
+/* Modify the background color */
+
+.navbar-custom {
+    background-color: red;
+}
