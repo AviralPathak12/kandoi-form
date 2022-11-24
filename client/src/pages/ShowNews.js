@@ -23,7 +23,7 @@ const NewsList = () => {
 
   useEffect(() => {
     loadNewsByArrival();
-  },[]);
+  }, []);
 
   return (
     <section className="section-padding">
@@ -31,16 +31,23 @@ const NewsList = () => {
         <div className="row justify-content-center">
           {newsByArrival.map((news, i) => (
             <Link to={"/news?id=" + news._id}>
-              <div className="col-lg-3 col-md-5 col-sm-6 p-2" key={i}>
-                <img
-                  width="100"
-                  height="100"
-                  src={`https://kspall.s3.ap-south-1.amazonaws.com/${news.image}`}
-                  alt=""
-                />
-                <h3>{news.title}</h3>
-                <p>{news.description}</p>
-                <p>{moment(news.createdAt).format("hh:mm A DD/MM/YYYY")}</p>
+              <div
+                className="col-lg-3 col-md-5 col-sm-6 p-2"
+                style={{ flexDirection: "row", display: "flex" }}
+                key={i}
+              >
+                  <img
+                    width="100"
+                    height="100"
+                    src={`https://kspall.s3.ap-south-1.amazonaws.com/${news.image}`}
+                    alt=""
+                  />
+
+                <div className="m-l-5">
+                  <h3>{news.title}</h3>
+                  <p>{news.description}</p>
+                  <p>{moment(news.createdAt).format("hh:mm A DD/MM/YYYY")}</p>
+                </div>
               </div>
             </Link>
           ))}
