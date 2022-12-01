@@ -30,9 +30,9 @@ const NewsList = () => {
       <div className="container">
         <div className="row justify-content-center">
           {newsByArrival.map((news, i) => (
-            <Link to={"/news?id=" + news._id}>
+            <Link to={"/news?id=" + news._id} style={{backgroundColor: "white",border: "3px solid black", marginTop:"1%"}}>
               <div
-                className="col-lg-3 col-md-5 col-sm-6 p-2"
+                className="col-lg-6 col-md-5 col-sm-6 p-2"
                 style={{ flexDirection: "row", display: "flex" }}
                 key={i}
               >
