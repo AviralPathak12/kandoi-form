@@ -77,7 +77,6 @@ const s3 = new aws.S3();
   };
 
   exports.newsListType = async (req, res) => {
-    console.log('news')
     const type = req.query.type
 
     let value = "";

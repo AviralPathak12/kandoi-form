@@ -1,5 +1,6 @@
 const express = require("express");
 const newsRouter = express.Router();
+const {body} = require("express-validator")
 
 const {
   multerUploadImage,
